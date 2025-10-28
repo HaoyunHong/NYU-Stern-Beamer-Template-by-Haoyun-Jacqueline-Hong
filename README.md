@@ -58,7 +58,9 @@ Both engines are supported.
 
 The NYU and NYU Stern logos are **registered trademarks** of New York University.  
 They are **not included** in this repository.  
-You must obtain the official logo files directly from the NYU brand resources  
+You must obtain the official logo files directly from the NYU brand resources.
+
+Official download: [https://www.stern.nyu.edu/brand-guidelines/nyu-stern-logo]
 
 This template is an **independent, student-created** project and is **not affiliated with or endorsed by** NYU or NYU Stern.
 
