@@ -54,19 +54,6 @@ Both engines are supported.
 
 ---
 
-## 🖼️ Preview
-
-Below is a preview placeholder for the example output:
-
-<p align="center">
-  <img src="docs/preview.png" alt="NYU Stern Beamer Template Preview" width="800">
-</p>
-
-> The preview shows the NYU Stern color scheme and slide layout.  
-> (Logos shown for illustration only — **actual logo files are not distributed**.)
-
----
-
 ## ⚠️ NYU Stern Logo and Branding Policy
 
 The NYU and NYU Stern logos are **registered trademarks** of New York University.  
