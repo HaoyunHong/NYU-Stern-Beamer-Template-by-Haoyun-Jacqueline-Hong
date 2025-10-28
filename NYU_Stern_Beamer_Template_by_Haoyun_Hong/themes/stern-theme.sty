@@ -1,0 +1,135 @@
+% ==========================================================
+% NYU Stern Beamer Theme (.sty)
+% ----------------------------------------------------------
+% Author: Haoyun (Jacqueline) Hong
+% Contact: hh3863@stern.nyu.edu
+% Institution: NYU Stern School of Business
+%
+% Description:
+%   A clean and minimalistic Beamer theme inspired by
+%   NYU Stern’s brand colors and presentation style.
+%   Supports [light] and [dark] modes.
+%
+% License:
+%   MIT License (see LICENSE file for details)
+%   NYU and NYU Stern logos are trademarks of New York University.
+%   Logos are NOT distributed with this package.
+%
+% Disclaimer:
+%   Independent student-created resource.
+%   Not affiliated with or endorsed by NYU or NYU Stern.
+% ==========================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{stern-theme}[2025/10/28 NYU Stern Beamer Theme]
+
+% ==========================================================
+% --- OPTIONS: LIGHT / DARK MODE ---
+% ==========================================================
+\newif\ifstern@dark
+\DeclareOption{dark}{\stern@darktrue}
+\DeclareOption{light}{\stern@darkfalse}
+\ExecuteOptions{light} % Default mode
+\ProcessOptions\relax
+
+% ==========================================================
+% --- BASE BEAMER SETTINGS ---
+% ==========================================================
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{} % remove navigation buttons
+
+% ==========================================================
+% --- COLORS ---
+% ==========================================================
+\definecolor{sternviolet}{HTML}{57068C}
+\definecolor{sterngray}{HTML}{4D4F53}
+\definecolor{lightbg}{HTML}{FAFAFA}
+\definecolor{darkbg}{HTML}{1B1B1B}
+
+\ifstern@dark
+  % --- DARK MODE COLORS ---
+  \setbeamercolor{normal text}{fg=white,bg=darkbg}
+  \setbeamercolor{structure}{fg=sternviolet}
+  \setbeamercolor{frametitle}{bg=sternviolet,fg=white}
+  \setbeamercolor{title}{bg=sternviolet,fg=white}
+  \setbeamercolor{block title}{bg=sternviolet!80,fg=white}
+  \setbeamercolor{block body}{bg=sterngray!20,fg=white}
+  \setbeamercolor{alerted text}{fg=sternviolet}
+  \setbeamercolor{itemize item}{fg=sternviolet}
+  \setbeamercolor{itemize subitem}{fg=sterngray!60}
+\else
+  % --- LIGHT MODE COLORS ---
+  \setbeamercolor{normal text}{fg=black,bg=lightbg}
+  \setbeamercolor{structure}{fg=sternviolet}
+  \setbeamercolor{frametitle}{bg=sternviolet,fg=white}
+  \setbeamercolor{title}{bg=sternviolet,fg=white}
+  \setbeamercolor{block title}{bg=sternviolet!90,fg=white}
+  \setbeamercolor{block body}{bg=white,fg=black}
+  \setbeamercolor{alerted text}{fg=sternviolet}
+  \setbeamercolor{itemize item}{fg=sternviolet}
+  \setbeamercolor{itemize subitem}{fg=sterngray}
+\fi
+
+% ==========================================================
+% --- FONTS ---
+% ==========================================================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usefonttheme{professionalfonts}
+
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamerfont{section title}{size=\Large,series=\bfseries}
+\setbeamerfont{normal text}{size=\large,series=\bfseries}
+\setbeamerfont{block title}{size=\large,series=\bfseries}
+\setbeamerfont{block body}{size=\large,series=\bfseries}
+
+% ==========================================================
+% --- FOOTLINE ---
+% ==========================================================
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex,leftskip=1em,rightskip=1em]{}
+    \ifstern@dark
+      \textcolor{white}{\textbf{\insertshorttitle}}%
+      \hfill
+      \textcolor{white}{\textbf{\insertframenumber/\inserttotalframenumber}}
+    \else
+      \textcolor{sterngray}{\textbf{\insertshorttitle}}%
+      \hfill
+      \textcolor{sterngray}{\textbf{\insertframenumber/\inserttotalframenumber}}
+    \fi
+  \end{beamercolorbox}
+}
+
+% ==========================================================
+% --- HYPERREF SETTINGS ---
+% ==========================================================
+\usepackage{hyperref}
+\pdfstringdefDisableCommands{%
+  \def\translate#1{#1}%
+}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=sternviolet,
+  urlcolor=sternviolet,
+  citecolor=sternviolet
+}
+
+% ==========================================================
+% --- OPTIONAL LOGO AREA (top-right) ---
+% ==========================================================
+\usepackage[absolute,overlay]{textpos}
+\addtobeamertemplate{frametitle}{%
+  \begin{textblock*}{10cm}(0.82\textwidth,0.05cm)
+    % Uncomment and add your logo file path if desired:
+    % \includegraphics[height=0.9cm]{imgs/stern_long_white-on-purple_rgb.png}
+  \end{textblock*}
+}{}
+
+% ==========================================================
+% --- PACKAGE END ---
+% ==========================================================
+\endinput

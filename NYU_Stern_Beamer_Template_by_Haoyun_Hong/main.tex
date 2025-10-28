@@ -1,0 +1,125 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+% ==========================================================
+% NYU Stern Beamer Template
+% Author: Haoyun (Jacqueline) Hong
+% Contact: hh3863@stern.nyu.edu
+% Description: A minimalistic NYU Stern–style Beamer theme
+% ==========================================================
+
+% ==========================================================
+% --- LOAD CUSTOM THEME PACKAGE ---
+% ==========================================================
+% Make sure stern-theme.sty is in the same folder
+\usepackage{themes/stern-theme}
+
+% ==========================================================
+% --- TITLE PAGE INFORMATION ---
+% ==========================================================
+\title[\href{mailto:hh3863@stern.nyu.edu}{hh3863@stern.nyu.edu}]{Your Full Presentation Title}
+\subtitle{\Large Subtitle}
+\author{\large Haoyun (Jacqueline) Hong}
+\institute{\small Information Systems, NYU Stern School of Business}
+\date{\small \today}
+
+% ==========================================================
+% --- LOGO SETTINGS ---
+% ==========================================================
+% Place the NYU Stern logo image file under ./imgs/
+% (Not distributed in this repository.)
+% Official download:
+% https://www.stern.nyu.edu/brand-guidelines/nyu-stern-logo
+
+% Title page logo
+\titlegraphic{\vspace{5em}\includegraphics[height=0.8cm]{imgs/logo_nyu_stern.png}}
+
+% Optional: global logo on top-right purple bar
+\usepackage[absolute,overlay]{textpos}
+\addtobeamertemplate{frametitle}{%
+  \begin{textblock*}{10cm}(0.82\textwidth,0.05cm)
+    \includegraphics[height=0.9cm]{imgs/stern_long_white-on-purple_rgb.png}
+  \end{textblock*}
+}{}
+
+% ==========================================================
+% --- DOCUMENT START ---
+% ==========================================================
+\begin{document}
+
+% --- Title slide ---
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% --- Outline slide ---
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+% ==========================================================
+% --- SAMPLE CONTENT ---
+% ==========================================================
+\section{Motivation}
+\section{Model and Identification}
+
+\begin{frame}{Motivation}
+\begin{columns}[T]
+  \begin{column}{0.48\textwidth}
+    \textbf{Research Perspective}
+    \vspace{0.3em}
+    \begin{itemize}\setlength{\itemsep}{0.6em}
+      \item Prior Work and Research Gap 
+      \item Theory Contribution
+      \item Method Contribution
+    \end{itemize}
+  \end{column}
+
+  \begin{column}{0.48\textwidth}
+    \textbf{Practical Perspective}
+    \vspace{0.3em}
+    \begin{itemize}\setlength{\itemsep}{0.6em}
+      \item Company Level
+      \item Individual Level 
+      \item Society Level
+    \end{itemize}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Model Setup}
+  \begin{block}{Baseline Specification}
+    \[
+      y_{it} = \beta X_{it} + \gamma_i + \delta_t + \varepsilon_{it}
+    \]
+  \end{block}
+  Discuss assumptions, data, and empirical logic.
+\end{frame}
+
+\begin{frame}{Identification Strategy}
+  \begin{itemize}
+    \item Strategy: DiD / IV / Fixed Effects
+    \item Address threats to identification
+    \item Validation and robustness
+  \end{itemize}
+\end{frame}
+
+\section{Results}
+\begin{frame}{Main Results}
+  % Example: \includegraphics[width=0.9\linewidth]{main_result}
+  \alert{Interpret magnitude and significance clearly.}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+  \begin{itemize}
+    \item \alert{Main Takeaway 1:} concise and impactful
+    \item \alert{Main Takeaway 2:} robustness summary
+    \item \alert{Implication:} academic and managerial relevance
+  \end{itemize}
+\end{frame}
+
+\appendix
+\begin{frame}{Appendix}
+  Extra tables, figures, and robustness checks.
+\end{frame}
+
+\end{document}

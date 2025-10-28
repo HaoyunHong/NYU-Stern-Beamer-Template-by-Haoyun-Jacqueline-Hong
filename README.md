@@ -17,7 +17,7 @@ It reproduces Stern’s signature **violet-and-gray** color scheme and a minimal
 ## 📁 Folder Structure
 
 ```
-stern-beamer-template/
+NYU_Stern_Beamer_Template_by_Haoyun_Hong/
 │
 ├── main.tex                         # Main presentation file
 ├── themes/
