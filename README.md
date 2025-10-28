@@ -82,8 +82,9 @@ An example presentation demonstrating the theme:
 ## 👩‍💻 Author
 
 **Haoyun (Jacqueline) Hong**  
-Information Systems, NYU Stern School of Business  
-📧 [hh3863@stern.nyu.edu](mailto:hh3863@stern.nyu.edu)
+Information Systems, NYU Stern School of Business
+
+🌐 [https://haoyunhong.github.io/Haoyun_Jacqueline_Hong/]
 
 ---
 
