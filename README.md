@@ -64,6 +64,10 @@ Official download: [https://www.stern.nyu.edu/brand-guidelines/nyu-stern-logo]
 
 This template is an **independent, student-created** project and is **not affiliated with or endorsed by** NYU or NYU Stern.
 
+**Disclaimer:**  
+Using this Beamer template does **not** grant you any authorization, endorsement, or brand rights from NYU or NYU Stern.  
+This project is a student-created, independent work intended solely for educational and personal use.
+
 ---
 
 ## 🪪 License
